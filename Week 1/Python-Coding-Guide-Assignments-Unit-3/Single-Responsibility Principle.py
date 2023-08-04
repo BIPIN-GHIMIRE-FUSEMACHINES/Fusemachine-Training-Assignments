@@ -7,9 +7,9 @@ class Book:
         self.availability = availability
 
     def __str__(self):
-        print("."*100)
+        print("." * 100)
         return f"Books title:{self.title} Author:{self.author} ISBN:{self.isbn} genre:{self.genre} availability:{self.availability}"
-    
+
 
 class LibraryCatalog:
     def __init__(self):
@@ -20,13 +20,12 @@ class LibraryCatalog:
 
     def get_book_details(self):
         for book in self.books:
-                print(book)
+            print(book)
 
     def check_available_books(self):
         for book in self.books:
             if book.availability == True:
                 print(book)
-        
 
     def borow_book(self, book_isbn):
         for book in self.books:
@@ -40,10 +39,10 @@ class LibraryCatalog:
                 break
 
 
-book1 = Book("a","b",12,"c",True)
-book2 = Book("ab","bf",13,"cd",False)
-book3 = Book("ac","bf",14,"cer",True)
-book4 = Book("ad","ba",15,"asdc",True)
+book1 = Book("a", "b", 12, "c", True)
+book2 = Book("ab", "bf", 13, "cd", False)
+book3 = Book("ac", "bf", 14, "cer", True)
+book4 = Book("ad", "ba", 15, "asdc", True)
 
 # Test Cases for adding books
 
@@ -67,4 +66,3 @@ Catalog.borow_book(12)
 # Catalog.borow_book(12)
 # Catalog.get_book_details()
 # Catalog.check_available_books()
-
