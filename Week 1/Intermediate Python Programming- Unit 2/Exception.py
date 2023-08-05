@@ -114,3 +114,30 @@ if __name__ == "__main__":
     except InvalidAgeError as e:
         print(f"Error: {e}")
 
+'''
+Question 4
+Write a Python program that takes two integers as input and performs division (num1
+/ num2). Handle both ValueError (if non-integer input) and ZeroDivisionError and
+display appropriate error messages.
+'''
+
+def perform_division(num1, num2):
+    try:
+        result = num1 / num2
+        return result
+    except ValueError:
+        print("Error: Please enter valid integers.")
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+
+if __name__ == "__main__":
+    try:
+        num1 = int(input("Enter the first integer: "))
+        num2 = int(input("Enter the second integer: "))
+
+        division_result = perform_division(num1, num2)
+        if division_result is not None:
+            print(f"The result of {num1} / {num2} is: {division_result}")
+
+    except ValueError:
+        print("Error: Please enter valid integers.")
