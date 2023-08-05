@@ -73,3 +73,44 @@ if __name__ == "__main__":
         print(file_contents)
 
 
+
+'''
+Question 3
+Write a Python program that takes user input for age. Create a custom exception
+InvalidAgeError to handle cases where the age is below 0 or above 120.
+'''
+
+class InvalidAgeError(Exception):
+    """
+    Custom exception class to handle invalid age values.
+    """
+    pass
+
+def check_age(age):
+    """
+    Check if the given age is valid.
+
+    Args:
+        age (int): The age to be checked.
+
+    Raises:
+        InvalidAgeError: If the age is below 0 or above 120.
+
+    Returns:
+        int: The valid age.
+
+    """
+    if age < 0 or age > 120:
+        raise InvalidAgeError("Invalid age! Age should be between 0 and 120.")
+    return age
+
+if __name__ == "__main__":
+    try:
+        age = int(input("Enter your age: "))
+        valid_age = check_age(age)
+        print(f"Your age is: {valid_age}")
+    except ValueError:
+        print("Error: Please enter a valid integer for age.")
+    except InvalidAgeError as e:
+        print(f"Error: {e}")
+
