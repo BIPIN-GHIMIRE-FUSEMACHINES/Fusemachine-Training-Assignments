@@ -45,3 +45,31 @@ def find_bigger_number(num1, num2, num3):
 print(find_bigger_number(11, 20, 18))  # Output: 20
 print(find_bigger_number(50, 50, 50))    # Output: 'Equal'
 print(find_bigger_number(50, 50, 40))    # Output: 50
+
+'''
+Question 3
+Implement a function called check_prime that takes a positive integer as input and
+uses a ternary operator to determine if it's a prime number. Return "Prime" if it is,
+otherwise "Not Prime."
+'''
+def check_prime(number):
+    """
+    Check if the given positive number is prime.
+
+    Args:
+        number (int): The positive integer to be checked.
+
+    Returns:
+        str: "Prime" if the number is prime, "Not Prime" otherwise.
+
+    """
+    if number < 2:
+        return "Not Prime"
+    is_prime = all(number % i != 0 for i in range(2, int(number**0.5) + 1))
+    return "Prime" if is_prime else "Not Prime"
+
+print(check_prime(100))   # Output: 'Prime'
+print(check_prime(10))  # Output: 'Not Prime'
+print(check_prime(13))  # Output: 'Prime'
+
+
