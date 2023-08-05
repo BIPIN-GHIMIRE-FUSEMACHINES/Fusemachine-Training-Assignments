@@ -53,3 +53,32 @@ print(concat_strings("Working", " ", "with", " ", "*args and **kwargs."))
 print(concat_strings("This", " ", "is", " ", "a", " ", "test."))  
 print(concat_strings("One", " ", "two", " ", "three"))  
 print(concat_strings("I", " ", "love", " ", "Barcelona", "!"))  
+
+'''
+Question 3
+[**kwargs] Write a Python function calculate_total_cost that calculates the total
+cost of items purchased from a store. The function should accept multiple keyword
+arguments, where the key is the item name, and the value is the item's price. The
+function should return the total cost of all items.
+'''
+def calculate_total_cost(**kwargs):
+    """
+    Calculate the total cost of items purchased from a store.
+
+    Args:
+        **kwargs: Multiple keyword arguments where the key is the item name and the value is the item's price.
+
+    Returns:
+        float: The total cost of all items.
+    """
+    if not kwargs:
+        return "No items added."
+    
+    total_cost = sum(kwargs.values())
+    return total_cost
+
+# Test cases
+print(calculate_total_cost(item1=10.99, item2=5.49, item3=2.99))  
+print(calculate_total_cost(item1=1500.00, item2=812.50, item3=3.3325, item4=6232.75))  
+print(calculate_total_cost(item1=1.00, item2=2.00, item3=3.00, item4=4.00))  
+print(calculate_total_cost())  
