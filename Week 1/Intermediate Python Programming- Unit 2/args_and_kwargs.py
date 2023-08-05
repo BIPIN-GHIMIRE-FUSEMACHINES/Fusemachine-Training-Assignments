@@ -82,3 +82,36 @@ print(calculate_total_cost(item1=10.99, item2=5.49, item3=2.99))
 print(calculate_total_cost(item1=1500.00, item2=812.50, item3=3.3325, item4=6232.75))  
 print(calculate_total_cost(item1=1.00, item2=2.00, item3=3.00, item4=4.00))  
 print(calculate_total_cost())  
+
+'''
+Question 4
+[**kwargs] Create a function create_student_report that takes the student's
+name as the first argument, the student's age as the second argument, and an
+arbitrary number of keyword arguments for the subjects and their respective
+scores. The function should return a dictionary with the student's information and a
+list of subjects along with their scores.
+'''
+
+def create_student_report(name, age, **subjects):
+    """
+    Create a student report containing the student's information and their scores in various subjects.
+
+    Args:
+        name (str): The student's name.
+        age (int): The student's age.
+        **subjects: Arbitrary keyword arguments where the key is the subject name and the value is the score.
+
+    Returns:
+        dict: A dictionary containing the student's information and a list of subjects along with their scores.
+        
+    """
+    student_info = {
+        'name': name,
+        'age': age,
+        'report': subjects
+    }
+    return student_info
+
+print(create_student_report('Bipin', 24, math=90, physics=85, OOAD=78))
+print(create_student_report('Hari', 17, social=82, health=90))
+
