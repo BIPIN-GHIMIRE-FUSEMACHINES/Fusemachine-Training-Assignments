@@ -24,3 +24,16 @@ list2 = [10, 20, 30, 40, 50,60]
 product_list = [list1[i] * list2[i] for i in range(min(len(list1), len(list2)))]
 
 print(product_list)
+
+'''
+Question 1 - Dictionary
+[dictionary comprehension] Given two lists - one containing keys and another
+containing values, create a dictionary using dictionary comprehension.
+'''
+keys = ["name", "age", "city", "gender"]
+values = ["Kp Ba", 30, "Nepal", "Male","Yemale"]
+
+# Dictionary comprehension to create the dictionary
+my_dict = {keys[i]: values[i] for i in range(min(len(keys), len(values)))}
+
+print(my_dict)
