@@ -32,5 +32,44 @@ num2 = int(input("Enter the second integer: "))
 division_result = perform_division(num1, num2)
 print(f"The result of {num1} / {num2} is: {division_result}")
 
+'''
+Question 2
+Implement a program that takes user input for a filename, opens the file in read
+mode, and displays its contents. Handle the FileNotFoundError and display an error
+message if the file is not found.
+'''
+
+def read_file_contents(filename):
+    """
+    Read the contents of a file.
+
+    Args:
+        filename (str): The name of the file to be read.
+
+    Returns:
+        str: The contents of the file as a string.
+
+    Raises:
+        FileNotFoundError: If the specified file is not found.
+
+    """
+    try:
+        with open(filename, 'r') as file:
+            contents = file.read()
+            return contents
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' not found.")
+
+if __name__ == "__main__":
+    """
+    Main function to read and display the contents of a file.
+    """
+    filename = input("Enter the filename: ")
+
+    file_contents = read_file_contents(filename)
+
+    if file_contents is not None:
+        print(f"Contents of the file '{filename}':")
+        print(file_contents)
 
 
