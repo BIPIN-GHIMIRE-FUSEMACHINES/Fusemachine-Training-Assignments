@@ -57,3 +57,16 @@ scores_dict = {
 high_scores_dict = {name: score for name, score in scores_dict.items() if score > 80}
 
 print(high_scores_dict)
+
+'''
+Question 1 - Set
+[set comprehension] Given a list of numbers, create a set using set
+comprehension that contains only unique even numbers.
+'''
+
+numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Set comprehension to create a set of unique even numbers
+even_numbers_set = {num for num in numbers_list if num % 2 == 0}
+
+print(even_numbers_set)
