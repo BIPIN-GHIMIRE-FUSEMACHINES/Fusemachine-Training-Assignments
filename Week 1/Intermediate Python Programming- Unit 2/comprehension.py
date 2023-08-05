@@ -70,3 +70,21 @@ numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 even_numbers_set = {num for num in numbers_list if num % 2 == 0}
 
 print(even_numbers_set)
+
+
+
+'''
+Question 2 - Set
+[set comprehension] Given two strings, write a Python program to create a set
+using set comprehension that contains all the characters that are common in both
+strings.
+'''
+
+string1 = "fuse"
+string2 = "human"
+
+# Set comprehension to create a set of common characters
+common_characters_set = {char for char in string1 if char in string2}
+
+print(common_characters_set)
+
