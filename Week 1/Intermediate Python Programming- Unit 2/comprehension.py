@@ -37,3 +37,23 @@ values = ["Kp Ba", 30, "Nepal", "Male","Yemale"]
 my_dict = {keys[i]: values[i] for i in range(min(len(keys), len(values)))}
 
 print(my_dict)
+
+'''
+Question 2 - dictionary
+[dictionary comprehension] Given a dictionary with students' names as keys and
+their respective scores as values, create a new dictionary that contains only the
+students who scored more than 80 using dictionary comprehension.
+'''
+
+scores_dict = {
+    "Hari": 90,
+    "Sita": 75,
+    "Gita": 85,
+    "Ram": 95,
+    "shyam": 78
+}
+
+# Dictionary comprehension to filter students with scores more than 80
+high_scores_dict = {name: score for name, score in scores_dict.items() if score > 80}
+
+print(high_scores_dict)
