@@ -59,3 +59,34 @@ def filter_prime_numbers(numbers):
 
 print(filter_prime_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))  
 print(filter_prime_numbers([-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+'''
+Question 3
+[reduce] Write a Python function calculate_factorial that takes an integer as input
+and uses the reduce function to return the factorial of that number.
+'''
+from functools import reduce
+
+def calculate_factorial(n):
+    """
+    Calculate the factorial of a given number.
+
+    Args:
+        n (int): An integer for which the factorial is to be calculated.
+
+    Returns:
+        int: The factorial of the given number.
+
+    """
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+    if n == 0:
+        return 1
+    factorial = reduce(lambda x, y: x * y, range(1, n + 1))
+    return factorial
+
+print(calculate_factorial(5)) 
+print(calculate_factorial(0))  
+ 
+
+
