@@ -6,5 +6,9 @@
     {
       "name": "Sita",
       "age": 25
-    }
+    },
+    {
+        "name": "Sitaram",
+        "age": 67
+      }
 ]
